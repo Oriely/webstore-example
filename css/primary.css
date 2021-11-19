@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+    --width-desktop:1024px;
+    --hero-background: yellow;
+    --header-background: ;
+    --footer-background: ;
+    --nav-background: ;
+}
+
+ 
+body {
+    padding:0;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+button {
+    padding:10px;
+}
+
+
+.logo {
+    
+}
+
+.logo h1 {
+    font-size:30px;
+}
+
+
+.header {
+    display:flex;
+    justify-content: center;
+}
+
+.header-inner {
+    width:var(--width-desktop);
+    background:var(--header-background);
+    padding:10px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.navigation {
+    display:flex;
+    justify-content: center;
+    background:var(--nav-background);
+}
+
+
+.navigation ul {
+    list-style-type: none;
+}
+
+.nav-inner {
+    width:var(--width-desktop);
+}
+
+
+.nav-list {
+    display:flex;
+    margin:0;
+    padding:0;
+}
+
+.nav-item {
+    
+}
+
+.nav-item:hover {
+    background: #CCC;
+
+}
+
+.nav-item a {
+    padding:10px;
+    display:blocK
+}
+
+.hero {
+    display:flex;
+    justify-content: center;
+}
+
+.hero-inner {
+    width:var(--width-desktop);
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.promotion-slider {
+    position:relative;
+}
+
+.promotion-image {
+    display:none;
+    transition:ease-in 1s;
+    animation:fadeIn 0.5s ease;
+}
+
+.slide-controller {
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 10;
+    height:100%;
+    align-items: center;
+
+}
+
+.next-slide, .prev-slide {
+    cursor:pointer;
+    user-select: none;
+    font-size:30px;
+    padding: 10px;
+}
+
+.next-slide:hover, .prev-slide:hover {
+    background:rgba(0, 0, 0, 0.248);
+    transition: background .5s;
+}
+
+.next-slide:active, .prev-slide:active {
+    background:rgba(0, 0, 0, 0.165);
+    transition: background .1s;
+}
+
+.promotion-image img {
+    width:100%;
+    object-fit:contain;
+}
+
+.footer {
+    display:flex;
+    justify-content: center;
+    background:var(--footer-background);
+
+}
+
+
+
+.footer-inner {
+    padding:10px 10px 50px 10px;
+    width: var(--width-desktop);
+    display:flex;
+    justify-content: space-between;
+
+    height:100%;
+}
+
+@media only screen and (max-width: 768px) {
+    :root {
+        --width-desktop:960px;
+        --hero-background: yellow;
+        --header-background: ;
+        --footer-background: ;
+        --nav-background: ;
+    }
+
+    .footer-inner {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .copyright, .social-links, .contact {
+        text-align:center;
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
